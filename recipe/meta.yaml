@@ -1,5 +1,5 @@
 {% set name = "django-mongodb-backend" %}
-{% set version = "5.2.2" %}
+{% set version = "5.2.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/django_mongodb_backend-{{ version }}.tar.gz
-  sha256: 2ab1e892fbd936a194c5881aa2a4dce3707ece3c4b2f9744233b8ff785263d46
+  sha256: 1b08f7068709c74fd4a824d5a2068208eb19e5ba1f263beb181171b79fa53efb
 
 build:
   noarch: python
