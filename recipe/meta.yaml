@@ -1,5 +1,5 @@
 {% set name = "django-mongodb-backend" %}
-{% set version = "5.2.3" %}
+{% set version = "6.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/django_mongodb_backend-{{ version }}.tar.gz
-  sha256: 1b08f7068709c74fd4a824d5a2068208eb19e5ba1f263beb181171b79fa53efb
+  sha256: f3f4d3df0a69061a008f4254baaa7cd10ad5f3e98ec054b0d251edd1611fd1a3
 
 build:
   noarch: python
@@ -22,8 +22,11 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - django >=5.2,<6.0
-    - pymongo >=4.7,<5.0
+    - django <6.1,>=6.0
+    - pymongo <5.0,>=4.7
+    # - sphinx-copybutton 
+    # - sphinx >=7
+    # - furo >=2025.7.19
 
 test:
   imports:
