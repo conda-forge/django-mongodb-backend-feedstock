@@ -1,5 +1,6 @@
 {% set name = "django-mongodb-backend" %}
 {% set version = "6.0.0" %}
+{% set python_min = "3.12" %}
 
 package:
   name: {{ name|lower }}
@@ -22,8 +23,8 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - django <6.1,>=6.0
-    - pymongo <5.0,>=4.7
+    - django >=6.0,<6.1
+    - pymongo >=4.7,<5.0
     # - sphinx-copybutton 
     # - sphinx >=7
     # - furo >=2025.7.19
